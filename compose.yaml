@@ -1,0 +1,60 @@
+# WOPI integration test stack
+# Usage: docker compose up -d && deno task test:wopi
+#
+# Spins up Collabora, PostgreSQL, and SeaweedFS.
+# The Drive server runs on the host (not in Docker) so Playwright can reach it.
+# Collabora needs to reach the host's Drive server for WOPI callbacks —
+# we use host.docker.internal for that.
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: driver
+      POSTGRES_PASSWORD: driver
+      POSTGRES_DB: driver_db
+    ports:
+      - "5433:5432"   # 5433 to avoid conflict with host postgres
+    healthcheck:
+      test: pg_isready -U driver
+      interval: 2s
+      timeout: 5s
+      retries: 10
+
+  seaweedfs:
+    image: chrislusf/seaweedfs:latest
+    command: "server -s3 -dir=/data -master.volumeSizeLimitMB=32"
+    ports:
+      - "8334:8333"   # S3 API (8334 to avoid conflict with host weed mini)
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O-", "http://localhost:9333/cluster/status"]
+      interval: 3s
+      timeout: 5s
+      retries: 10
+
+  collabora:
+    image: collabora/code:latest
+    ports:
+      - "9980:9980"
+    environment:
+      # Allow WOPI callbacks from the host machine's Drive server
+      aliasgroup1: "http://host\\.docker\\.internal:3200"
+      server_name: "localhost:9980"
+      extra_params: >-
+        --o:ssl.enable=false
+        --o:ssl.termination=false
+        --o:net.proto=IPv4
+        --o:logging.level=warning
+        --o:num_prespawn_children=1
+        --o:per_document.max_concurrency=2
+      username: admin
+      password: admin
+    cap_add:
+      - SYS_CHROOT
+      - SYS_ADMIN
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:9980/hosting/discovery"]
+      interval: 5s
+      timeout: 10s
+      retries: 30
+      start_period: 30s

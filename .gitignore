@@ -1,0 +1,31 @@
+# Dependencies
+ui/node_modules/
+
+# Build output
+ui/dist/
+driver
+
+# Coverage
+.coverage/
+ui/coverage/
+
+# Test artifacts
+ui/e2e/test-results/
+ui/e2e/screenshots/
+
+# Deno cache
+.deno/
+
+# OS
+.DS_Store
+
+# Test fixtures (large binaries)
+ui/SBBB*
+
+# IDE
+.vscode/
+.idea/
+
+# Env
+.env
+.env.local
