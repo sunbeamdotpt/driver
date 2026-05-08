@@ -32,29 +32,6 @@ services:
       timeout: 5s
       retries: 10
 
-  collabora:
-    image: collabora/code:latest
-    ports:
-      - "9980:9980"
-    environment:
-      # Allow WOPI callbacks from the host machine's Drive server
-      aliasgroup1: "http://host\\.docker\\.internal:3200"
-      server_name: "localhost:9980"
-      extra_params: >-
-        --o:ssl.enable=false
-        --o:ssl.termination=false
-        --o:net.proto=IPv4
-        --o:logging.level=warning
-        --o:num_prespawn_children=1
-        --o:per_document.max_concurrency=2
-      username: admin
-      password: admin
-    cap_add:
-      - SYS_CHROOT
-      - SYS_ADMIN
-    healthcheck:
-      test: ["CMD", "curl", "-sf", "http://localhost:9980/hosting/discovery"]
-      interval: 5s
-      timeout: 10s
-      retries: 30
-      start_period: 30s
+  # Collabora removed — use the workspace service when needed, or run:
+  #   docker run -d -p 9980:9980 -e "extra_params=--o:ssl.enable=false" collabora/code:latest
+  #

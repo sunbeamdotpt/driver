@@ -63,7 +63,7 @@ DRIVER_TEST_MODE=1 \
 deno run -A main.ts
 ```
 
-Open `http://localhost:3000`.
+Open `http://localhost:3100`.
 
 `DRIVER_TEST_MODE=1` bypasses Kratos auth and injects a fake identity. No Ory stack needed unless you're working on auth flows.
 
@@ -165,7 +165,7 @@ SEAWEEDFS_S3_URL="http://localhost:8333"
 
 # Optional — defaults are fine for local dev
 PORT=3000
-PUBLIC_URL="http://localhost:3000"
+PUBLIC_URL="http://localhost:3100"
 S3_BUCKET="sunbeam-driver"
 DRIVER_TEST_MODE=1
 
@@ -197,7 +197,7 @@ DATABASE_URL="postgres://localhost/driver_db" deno run -A server/migrate.ts
 Uploaded files directly to SeaweedFS and they're not showing up?
 
 ```bash
-curl -X POST http://localhost:3000/api/admin/backfill \
+curl -X POST http://localhost:3100/api/admin/backfill \
   -H "Content-Type: application/json" \
   -d '{"dry_run": true}'
 ```

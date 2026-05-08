@@ -3,7 +3,7 @@ import type { Context, Next } from "hono";
 const KRATOS_PUBLIC_URL =
   Deno.env.get("KRATOS_PUBLIC_URL") ??
   "http://kratos-public.ory.svc.cluster.local:80";
-const PUBLIC_URL = Deno.env.get("PUBLIC_URL") ?? "http://localhost:3000";
+const PUBLIC_URL = Deno.env.get("PUBLIC_URL") ?? "http://localhost:3100";
 const TEST_MODE = Deno.env.get("DRIVER_TEST_MODE") === "1";
 if (TEST_MODE && Deno.env.get("DEPLOYMENT_ENVIRONMENT") === "production") {
   throw new Error("DRIVER_TEST_MODE=1 is forbidden when DEPLOYMENT_ENVIRONMENT=production");

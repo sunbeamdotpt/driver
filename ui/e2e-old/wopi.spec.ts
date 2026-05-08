@@ -28,7 +28,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const SCREENSHOT_DIR = path.join(__dirname, 'screenshots')
 
-const DRIVER_URL = process.env.DRIVER_URL || 'http://localhost:3200'
+const DRIVER_URL = process.env.DRIVER_URL || 'http://localhost:3100'
 const COLLABORA_URL = process.env.COLLABORA_URL || 'http://localhost:9980'
 const RUN_ID = `wopi-${Date.now()}`
 const createdFileIds: string[] = []

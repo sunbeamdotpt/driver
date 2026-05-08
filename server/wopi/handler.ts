@@ -244,7 +244,7 @@ export async function generateWopiTokenHandler(c: Context): Promise<Response> {
   try {
     const urlsrc = await getCollaboraActionUrl(file?.mimetype ?? "", "edit");
     if (urlsrc) {
-      const PUBLIC_URL = Deno.env.get("PUBLIC_URL") ?? "http://localhost:3000";
+      const PUBLIC_URL = Deno.env.get("PUBLIC_URL") ?? "http://localhost:3100";
       const wopiSrc = encodeURIComponent(`${PUBLIC_URL}/wopi/files/${fileId}`);
       editorUrl = `${urlsrc}WOPISrc=${wopiSrc}`;
     }

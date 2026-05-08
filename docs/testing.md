@@ -153,7 +153,7 @@ DRIVER_TEST_MODE=1 \
 deno run -A main.ts
 
 # Run the tests
-cd ui && DRIVER_URL=http://localhost:3200 npx playwright test e2e/wopi.spec.ts
+cd ui && DRIVER_URL=http://localhost:3100 npx playwright test e2e/wopi.spec.ts
 ```
 
 13 tests covering the full WOPI editing flow:

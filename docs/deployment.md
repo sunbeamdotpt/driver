@@ -40,7 +40,7 @@ Everything is configured via environment variables. No config files.
 | Variable | Default | Required | Description |
 |----------|---------|----------|-------------|
 | `PORT` | `3000` | No | Server listen port |
-| `PUBLIC_URL` | `http://localhost:3000` | Yes | Public-facing URL. Used in WOPI callback URLs, redirects, and CSRF. Must be the URL users see in their browser. |
+| `PUBLIC_URL` | `http://localhost:3100` | Yes | Public-facing URL. Used in WOPI callback URLs, redirects, and CSRF. Must be the URL users see in their browser. |
 | `DATABASE_URL` | `postgres://driver:driver@localhost:5432/driver_db` | Yes | PostgreSQL connection string |
 | `SEAWEEDFS_S3_URL` | `http://seaweedfs-filer.storage.svc.cluster.local:8333` | No | S3 endpoint |
 | `SEAWEEDFS_ACCESS_KEY` | *(empty)* | No | S3 access key (empty = unauthenticated) |

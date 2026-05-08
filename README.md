@@ -57,7 +57,7 @@ SEAWEEDFS_S3_URL="http://localhost:8333" \
 deno run -A main.ts
 ```
 
-Open `http://localhost:3000`. That's it.
+Open `http://localhost:3100`. That's it.
 
 For the full stack with Collabora editing, see [docs/local-dev.md](docs/local-dev.md).
 
@@ -146,7 +146,7 @@ cd ui && INTEGRATION_URL=https://integration.sunbeam.pt npx playwright test e2e/
 # WOPI integration tests (Playwright — needs docker compose stack)
 docker compose up -d
 # start server pointed at compose services, then:
-cd ui && DRIVER_URL=http://localhost:3200 npx playwright test e2e/wopi.spec.ts
+cd ui && DRIVER_URL=http://localhost:3100 npx playwright test e2e/wopi.spec.ts
 ```
 
 90%+ line coverage on both server and UI. See [docs/testing.md](docs/testing.md) for the full breakdown.
@@ -158,7 +158,7 @@ cd ui && DRIVER_URL=http://localhost:3200 npx playwright test e2e/wopi.spec.ts
 | Variable | Default | Description |
 |----------|---------|-------------|
 | `PORT` | `3000` | Server listen port |
-| `PUBLIC_URL` | `http://localhost:3000` | Public-facing URL (used in WOPI callbacks + redirects) |
+| `PUBLIC_URL` | `http://localhost:3100` | Public-facing URL (used in WOPI callbacks + redirects) |
 | `DATABASE_URL` | `postgres://driver:driver@localhost:5432/driver_db` | PostgreSQL connection string |
 | `SEAWEEDFS_S3_URL` | `http://seaweedfs-filer.storage.svc.cluster.local:8333` | S3 endpoint |
 | `SEAWEEDFS_ACCESS_KEY` | *(empty)* | S3 access key |
