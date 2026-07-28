@@ -1,3 +1,9 @@
+---
+title: S3 Layout
+description: How files are stored in SeaweedFS, and why you can browse the bucket and actually understand what you're looking at.
+updated_at: "2026-07-28"
+---
+
 # S3 Layout
 
 How files are stored in SeaweedFS, and why you can browse the bucket and actually understand what you're looking at.

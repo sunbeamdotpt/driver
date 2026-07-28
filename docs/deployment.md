@@ -1,3 +1,9 @@
+---
+title: Deployment
+description: How Drive runs in production as part of the SBBB Kubernetes stack.
+updated_at: "2026-07-28"
+---
+
 # Deployment
 
 How Drive runs in production as part of the SBBB Kubernetes stack.

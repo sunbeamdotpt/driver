@@ -1,3 +1,9 @@
+---
+title: Testing
+description: Five test suites, 90%+ coverage on both layers, and a Docker Compose stack for full WOPI integration tests.
+updated_at: "2026-07-28"
+---
+
 # Testing
 
 Five test suites, 90%+ coverage on both layers, and a Docker Compose stack for full WOPI integration tests.

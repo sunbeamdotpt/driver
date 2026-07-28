@@ -1,5 +1,8 @@
 # Drive
 
+[![Matrix](https://img.shields.io/badge/chat-%23hello%3Asunbeam.pt-0dbd8b?logo=matrix)](https://matrix.to/#/#hello:sunbeam.pt)
+[![License](https://img.shields.io/github/license/sunbeamdotpt/driver)](LICENSE)
+
 An S3 file browser with WOPI-based document editing, built for [La Suite Numérique](https://lasuite.numerique.gouv.fr/). One Deno binary. No Django, no Celery, no Next.js — files, folders, and Collabora. That's the whole thing.
 
 Built by [Sunbeam Studios](https://sunbeam.pt) as a drop-in replacement for the upstream [drive](https://github.com/suitenumerique/drive). The original is a Django/Celery/Next.js stack. This is a single binary that does the same job.

@@ -1,3 +1,9 @@
+---
+title: Permissions
+description: Zanzibar-style relationship-based access control via Ory Keto. Sounds fancy, works well.
+updated_at: "2026-07-28"
+---
+
 # Permissions
 
 Zanzibar-style relationship-based access control via Ory Keto. Sounds fancy, works well.

@@ -1,3 +1,9 @@
+---
+title: Local Development
+description: Zero to running in 2 minutes. Full WOPI editing stack takes a bit longer, but not much.
+updated_at: "2026-07-28"
+---
+
 # Local Development
 
 Zero to running in 2 minutes. Full WOPI editing stack takes a bit longer, but not much.
