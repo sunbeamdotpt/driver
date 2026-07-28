@@ -1,3 +1,9 @@
+---
+title: WOPI Integration
+description: How Drive talks to Collabora Online, how Collabora talks back, and the iframe dance that ties them together.
+updated_at: "2026-07-28"
+---
+
 # WOPI Integration
 
 How Drive talks to Collabora Online, how Collabora talks back, and the iframe dance that ties them together.

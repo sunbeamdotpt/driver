@@ -1,3 +1,9 @@
+---
+title: Architecture
+description: How the pieces fit together, and why there aren't very many of them.
+updated_at: "2026-07-28"
+---
+
 # Architecture
 
 How the pieces fit together, and why there aren't very many of them.
